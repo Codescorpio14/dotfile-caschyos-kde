@@ -1,0 +1,123 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+  - trigger: ":ht"
+    replace: "rpg hunt t h n"
+
+  - trigger: ":hh"
+    replace: "rpg hunt h"
+
+  - trigger: ":cd"
+    replace: "rpg cd"
+
+  - trigger: ":rf"
+    replace: "rpg farm"
+
+  - trigger: ":cs"
+    replace: "rpg chainsaw"
+
+  - trigger: ":dy"
+    replace: "rpg dynamite"
+
+  - trigger: ":bb"
+    replace: "rpg bigboat"
+
+  - trigger: ":gh"
+    replace: "rpg greenhouse"
+
+  - trigger: ":ul"
+    replace: "rpg ultr"
+
+  - trigger: ":rq"
+    replace: "rpg quest"
+
+  - trigger: ":blb"
+    replace: "rpg buy ed lb"
+
+  - trigger: ":fc"
+    replace: "rpg farm carrot"
+
+  - trigger: ":fp"
+    replace: "rpg farm potato"
+
+  - trigger: ":fb"
+    replace: "rpg farm bread"
+
+  - trigger: ":red"
+    replace: "rpg rd"
+
+  - trigger: ":adv"
+    replace: "rpg adv h"
+
+  - trigger: ":rt"
+    replace: "rpg trade"
+
+  - trigger: ":ro"
+    replace: "rpg open"
+
+  - trigger: ":tr"
+    replace: "rpg tr"
+
+  - trigger: ":ru"
+    replace: "rpg use"
+
+  - trigger: ":rs"
+    replace: "rpg sell"
+
+  - trigger: ":rb"
+    replace: "rpg buy"
+
+  - trigger: ":rc"
+    replace: "rpg craft"
+
+  - trigger: ":rd"
+    replace: "rpg dismantle"
+
+  - trigger: ":pc"
+    replace: "rpg pets claim"
+
+  - trigger: ":pa"
+    replace: "rpg pets adv learn epic"
+
+  - trigger: ":tc"
+    replace: "rpg use time cookie"
+
+  - trigger: ":ri"
+    replace: "rpg i"
+
+  - trigger: ":rp"
+    replace: "rpg p"
