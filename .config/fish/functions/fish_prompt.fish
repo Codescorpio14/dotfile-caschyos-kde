@@ -1,17 +1,9 @@
 function fish_prompt
-    set user (whoami)
+    set username $USER
+    set cwd (pwd)
 
-    if test $PWD = $HOME
-        set dir "~"
-    else
-        set dir (path basename $PWD)
-    end
+    # Replace your home path with ~ only at the beginning
+    set cwd (string replace -r "^$HOME" "~" $cwd)
 
-    echo -n " [ "
-    set_color green
-    echo -n "$user |"
-    set_color normal
-    echo -n " $dir"
-    echo -n " ] > "
+    printf " 👤%s | %s\n > " $username $cwd
 end
-
