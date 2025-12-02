@@ -1,9 +1,15 @@
 function fish_prompt
     set username $USER
-    set cwd (pwd)
+    set cwd (string replace -r "^$HOME" "~" (pwd))
 
-    # Replace your home path with ~ only at the beginning
-    set cwd (string replace -r "^$HOME" "~" $cwd)
+    set venv ""
+    if set -q VIRTUAL_ENV
+        set venv (basename $VIRTUAL_ENV)
+    end
 
-    printf " 👤%s | %s\n > " $username $cwd
+    if test -n "$venv"
+        printf "👤%s | %s\n %s > " $username $cwd $venv
+    else
+        printf " 👤%s | %s\n > " $username $cwd
+    end
 end
