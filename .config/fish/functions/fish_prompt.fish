@@ -8,8 +8,8 @@ function fish_prompt
     end
 
     if test -n "$venv"
-        printf "👤%s | %s\n %s > " $username $cwd $venv
+        printf " 🖥 %s | 📂%s\n %s > " $username $cwd $venv
     else
-        printf " 👤%s | %s\n > " $username $cwd
+        printf " 🖥 %s | 📂%s\n > " $username $cwd
     end
 end

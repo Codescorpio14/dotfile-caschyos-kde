@@ -7,7 +7,7 @@ This repository contains personal configuration files (dotfiles) managed with GN
 ## Configurations Included
 
 - Shell
-  - .bashrc, fish configuration under ~/.config/fish
+  - .bashrc, fish, starship configuration under ~/.config/fish
 - Editor
   - .vimrc and core Vim configuration
 - Tools
